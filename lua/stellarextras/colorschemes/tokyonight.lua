@@ -1,8 +1,7 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    lazy = true,
+    opts = { style = "storm" },
   }
 }
