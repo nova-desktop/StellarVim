@@ -29,6 +29,11 @@ function M.init()
   require("stellarvim.config.options")
   -- Then load the user's custom option overrides
   require("config.options")
+  if vim.bo.filetype == "lazy" then
+    -- HACK: StellarVim may have overwritten options of the Lazy UI, so it's reset here
+    -- Credit to LazyVim
+    vim.cmd([[do VimResized]])
+  end
 end
 
 return M
